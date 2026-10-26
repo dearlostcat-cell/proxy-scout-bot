@@ -1,0 +1,39 @@
+debug = false
+
+[output]
+path = "./out"
+sort_by_speed = true
+
+[output.txt]
+enabled = false
+
+[output.json]
+enabled = true
+include_asn = false
+include_geolocation = false
+
+[checking]
+check_url = "https://ipv4.icanhazip.com"
+max_concurrent_checks = 64
+timeout = 8.0
+connect_timeout = 3.0
+user_agent = "ProxyScout/0.1"
+
+[scraping]
+max_proxies_per_source = 100000
+timeout = 10.0
+connect_timeout = 3.0
+proxy = ""
+user_agent = "ProxyScout/0.1"
+
+[scraping.http]
+enabled = true
+urls = ["./input/http.txt"]
+
+[scraping.socks4]
+enabled = true
+urls = ["./input/socks4.txt"]
+
+[scraping.socks5]
+enabled = true
+urls = ["./input/socks5.txt"]
