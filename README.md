@@ -1,13 +1,13 @@
 # ProxyScout Telegram Bot
 
-ProxyScout is a small, self-hosted Telegram bot for collecting and checking public HTTP, SOCKS4 and SOCKS5 proxy candidates. It uses the Rust checker from the pinned [`build-3872` release](https://github.com/monosans/proxy-scraper-checker/releases/tag/build-3872) and keeps Telegram access private to configured user IDs.
+ProxyScout is a small, self-hosted Telegram bot for collecting and checking public HTTP, SOCKS4 and SOCKS5 proxy candidates. It uses the Rust checker from the pinned [`build-3880` release](https://github.com/monosans/proxy-scraper-checker/releases/tag/build-3880) and keeps Telegram access private to configured user IDs.
 
 The bot prefetches the configured HTTPS feeds, keeps only unique public IPv4 `address:port` candidates, then asks the Rust engine to verify each candidate by fetching a complete TLS-verified HTTPS response. The latest successful scan stores response latency and observed exit IP, without proxy credentials.
 
 ## Requirements
 
 - Python 3.11 or newer. The bot uses only the Python standard library.
-- The `proxy-scraper-checker` executable from release `build-3872`.
+- The `proxy-scraper-checker` executable from release `build-3880`.
 - A Telegram bot token from [BotFather](https://core.telegram.org/bots#botfather).
 
 ## Install the checker on Windows x64
@@ -18,7 +18,7 @@ From this folder, run:
 .\install_engine.ps1
 ```
 
-The script downloads and extracts the pinned x64 Windows executable into `engine/`. It does not run the executable. For other platforms, download the matching archive from the [pinned release page](https://github.com/monosans/proxy-scraper-checker/releases/tag/build-3872), extract it, and set `PROXY_SCRAPER_BINARY` to the executable path.
+The script downloads and extracts the pinned x64 Windows executable into `engine/`. It does not run the executable. For other platforms, download the matching archive from the [pinned release page](https://github.com/monosans/proxy-scraper-checker/releases/tag/build-3880), extract it, and set `PROXY_SCRAPER_BINARY` to the executable path.
 
 ## Start the bot
 

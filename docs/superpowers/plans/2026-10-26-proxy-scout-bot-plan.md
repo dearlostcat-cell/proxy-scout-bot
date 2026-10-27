@@ -4,16 +4,16 @@
 
 **Goal:** Deliver a self-hosted, private Telegram bot that collects and verifies a bounded set of public IPv4 HTTP/SOCKS4/SOCKS5 proxies using the pinned Rust checker.
 
-**Architecture:** Python 3.11+ standard-library modules handle Telegram long polling, feed collection, candidate filtering, and sanitized result persistence. The pinned `proxy-scraper-checker` `build-3872` binary runs as a child process with a local-file input config and JSON output.
+**Architecture:** Python 3.11+ standard-library modules handle Telegram long polling, feed collection, candidate filtering, and sanitized result persistence. The pinned `proxy-scraper-checker` `build-3880` binary runs as a child process with a local-file input config and JSON output.
 
-**Tech Stack:** Python 3.11+ standard library, Telegram Bot API over HTTPS, `monosans/proxy-scraper-checker` release `build-3872`.
+**Tech Stack:** Python 3.11+ standard library, Telegram Bot API over HTTPS, `monosans/proxy-scraper-checker` release `build-3880`.
 
 **Spec:** `docs/superpowers/specs/2026-10-26-proxy-scout-bot-design.md`
 
 ## Global Constraints
 
 - Python 3.11 or newer.
-- Use the exact `build-3872` Rust checker release; do not download or upgrade binaries automatically at runtime.
+- Use the exact `build-3880` Rust checker release; do not download or upgrade binaries automatically at runtime.
 - Accept only configured HTTPS feeds; reject redirects and candidates that are not globally routable IPv4 with a port in `1..65535`.
 - Deduplicate candidates and cap a scan at 2,000 unique candidates.
 - Configure 64 concurrent checks and stop a scan after five minutes.
@@ -104,7 +104,7 @@
 - Setup docs explain `/id`, environment setup, feed editing, scan limits and IPv4-first scope.
 
 - [ ] Add attribution and license references for source URL metadata derived from `monosans/proxy-scraper-checker`, `proxybroker2`, and `proxy_pool`.
-- [ ] Add a Windows PowerShell installer that downloads and extracts only the pinned `build-3872` x64 Windows release after the owner invokes it; document manual binary setup for other platforms.
+- [ ] Add a Windows PowerShell installer that downloads and extracts only the pinned `build-3880` x64 Windows release after the owner invokes it; document manual binary setup for other platforms.
 - [ ] Document starting BotFather, setting environment variables, discovering the user ID with `/id`, authorizing that ID, running the bot, and its private-only commands.
 - [ ] Document that public proxies are untrusted and short-lived, and that the bot does not run a relay or guarantee anonymity.
 - [ ] Add ignore rules for secrets, generated inputs, checker output and `data/latest.json`.

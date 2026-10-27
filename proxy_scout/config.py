@@ -59,7 +59,7 @@ def _resolve_checker(root_dir: Path, raw: str | None) -> Path:
         if located:
             return Path(located).resolve()
         raise ConfigurationError(
-            f"proxy-scraper-checker was not found at {raw!r}; install release build-3872 "
+            f"proxy-scraper-checker was not found at {raw!r}; install release build-3880 "
             "or set PROXY_SCRAPER_BINARY to its path"
         )
 
@@ -67,7 +67,7 @@ def _resolve_checker(root_dir: Path, raw: str | None) -> Path:
     candidate = root_dir / "engine" / name
     if not candidate.is_file():
         raise ConfigurationError(
-            f"checker executable is missing: {candidate}; install release build-3872 "
+            f"checker executable is missing: {candidate}; install release build-3880 "
             "or set PROXY_SCRAPER_BINARY"
         )
     return candidate.resolve()

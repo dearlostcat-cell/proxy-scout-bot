@@ -1,7 +1,7 @@
 FROM python:3.12-slim-bookworm AS checker-download
 
-ARG CHECKER_VERSION=build-3872
-ARG CHECKER_SHA256=08d65df2ec17a422689a4efcfb1d62812fcc63479538a25f33a3d1e22cdc71ab
+ARG CHECKER_VERSION=build-3880
+ARG CHECKER_SHA256=aa1c61e8781c73405529dc7f894176eda84c0e3f660d6a1968304fbd9588756d
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates curl \

@@ -2,7 +2,7 @@
 
 ## proxy-scraper-checker source catalog
 
-`config/sources.json` contains HTTPS feed URLs derived from the source lists in [`monosans/proxy-scraper-checker`](https://github.com/monosans/proxy-scraper-checker), tag `build-3872`. ProxyScout does not include or modify that project's Rust source code. The checker executable is installed separately from the same tagged release.
+`config/sources.json` contains HTTPS feed URLs derived from the source lists in [`monosans/proxy-scraper-checker`](https://github.com/monosans/proxy-scraper-checker), tag `build-3880`. ProxyScout does not include or modify that project's Rust source code. The checker executable is installed separately from the same tagged release.
 
 The upstream project is MIT-licensed:
 

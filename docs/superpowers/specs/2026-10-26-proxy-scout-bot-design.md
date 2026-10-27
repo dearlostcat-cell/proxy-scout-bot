@@ -6,7 +6,7 @@ Build a self-hosted Telegram bot that can collect public HTTP, SOCKS4 and SOCKS5
 
 ## Goals
 
-- Use the supplied `monosans/proxy-scraper-checker` release `build-3872` as the checking engine.
+- Use the supplied `monosans/proxy-scraper-checker` release `build-3880` as the checking engine.
 - Fetch configured HTTPS proxy feeds concurrently, normalize and deduplicate IPv4 `address:port` candidates, and discard non-public addresses before checking. The initial catalog has 72 distinct feeds drawn from the three supplied scraper projects: 37 HTTP, 10 SOCKS4 and 25 SOCKS5.
 - Verify candidates by fetching the full body of a TLS-verified HTTPS IP-check endpoint; retain the measured response time and observed exit IP.
 - Provide private-chat commands: `/id`, `/help`, `/scan`, `/status`, and `/list [http|socks4|socks5]`.
@@ -20,7 +20,7 @@ Build a self-hosted Telegram bot that can collect public HTTP, SOCKS4 and SOCKS5
 - Guarantee that public proxies remain online, anonymous, safe, or suitable for sensitive traffic.
 - Run a proxy relay/server, accept arbitrary user-provided source URLs, or expose a public proxy-list service.
 - Schedule unattended scans or deploy the bot to a hosting provider.
-- Support IPv6 proxy endpoints in this first version. The selected `build-3872` checker stores exit-IP metadata as IPv4; IPv6 support needs a separate engine change.
+- Support IPv6 proxy endpoints in this first version. The selected `build-3880` checker stores exit-IP metadata as IPv4; IPv6 support needs a separate engine change.
 
 ## Constraints and assumptions
 

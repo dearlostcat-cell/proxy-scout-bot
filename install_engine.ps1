@@ -1,8 +1,8 @@
 $ErrorActionPreference = "Stop"
 
 $engineDirectory = Join-Path $PSScriptRoot "engine"
-$archivePath = Join-Path $engineDirectory "proxy-scraper-checker-build-3872.zip"
-$releaseApi = "https://api.github.com/repos/monosans/proxy-scraper-checker/releases/tags/build-3872"
+$archivePath = Join-Path $engineDirectory "proxy-scraper-checker-build-3880.zip"
+$releaseApi = "https://api.github.com/repos/monosans/proxy-scraper-checker/releases/tags/build-3880"
 $assetName = "proxy-scraper-checker-binary-x86_64-pc-windows-msvc.zip"
 
 New-Item -ItemType Directory -Force -Path $engineDirectory | Out-Null
@@ -13,7 +13,7 @@ try {
         Accept = "application/vnd.github+json"
         "User-Agent" = "ProxyScout"
     } -TimeoutSec 30
-    if ($release.tag_name -ne "build-3872") {
+    if ($release.tag_name -ne "build-3880") {
         throw "GitHub returned an unexpected release tag."
     }
 
